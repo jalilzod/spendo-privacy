@@ -1,0 +1,368 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Spendo — Privacy Policy & Support</title>
+<meta name="description" content="Spendo is a private, offline expense and income tracker. It collects no data. Privacy policy and support contacts.">
+<style>
+  :root {
+    --violet: #7C5CFF;
+    --teal: #00C9A7;
+    --bg: #F4F5FA;
+    --surface: #FFFFFF;
+    --surface2: #ECEEF5;
+    --border: #E3E6EF;
+    --text: #12141C;
+    --muted: #6B7186;
+    --grad: linear-gradient(135deg, var(--violet), var(--teal));
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0B0D12;
+      --surface: #151822;
+      --surface2: #1E2230;
+      --border: #262B3B;
+      --text: #F2F3F7;
+      --muted: #8B91A5;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font: 16px/1.65 -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 820px; margin: 0 auto; padding: 0 20px; }
+
+  /* ---------- hero ---------- */
+  body { overflow-x: hidden; }
+  header {
+    position: relative;
+    padding: 56px 0 40px;
+  }
+  header::before, header::after {
+    content: "";
+    position: absolute;
+    width: 420px; height: 420px;
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: .35;
+    z-index: 0;
+  }
+  header::before { background: var(--violet); top: -180px; left: -120px; }
+  header::after  { background: var(--teal);   top: -120px; right: -160px; }
+  header .wrap { position: relative; z-index: 1; }
+  .brand { display: flex; align-items: center; gap: 14px; }
+  .logo {
+    width: 56px; height: 56px; border-radius: 17px;
+    background: var(--grad);
+    display: grid; place-items: center;
+    box-shadow: 0 10px 30px rgba(124, 92, 255, .4);
+  }
+  .logo svg { width: 30px; height: 30px; }
+  .brand b { font-size: 24px; letter-spacing: -.5px; }
+  h1 {
+    font-size: clamp(30px, 6vw, 44px);
+    line-height: 1.1;
+    letter-spacing: -1.2px;
+    margin: 28px 0 10px;
+  }
+  .grad-text {
+    background: var(--grad);
+    -webkit-background-clip: text; background-clip: text;
+    color: transparent;
+  }
+  .sub { color: var(--muted); font-size: 17px; margin: 0; }
+  .pill {
+    display: inline-flex; align-items: center; gap: 8px;
+    margin-top: 20px;
+    padding: 8px 14px;
+    border-radius: 999px;
+    background: rgba(0, 201, 167, .12);
+    color: var(--teal);
+    font-weight: 600; font-size: 14px;
+  }
+
+  /* ---------- language switch ---------- */
+  .lang {
+    position: absolute; top: 20px; right: 20px; z-index: 2;
+    display: flex; padding: 4px; gap: 4px;
+    background: var(--surface2); border-radius: 12px;
+  }
+  .lang button {
+    border: 0; cursor: pointer;
+    padding: 6px 12px; border-radius: 9px;
+    font: inherit; font-size: 13px; font-weight: 700;
+    color: var(--muted); background: transparent;
+  }
+  .lang button.on { background: var(--violet); color: #fff; }
+
+  /* ---------- cards ---------- */
+  .tldr {
+    display: grid; gap: 12px;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    margin: 8px 0 28px;
+  }
+  .tile, .card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 22px;
+  }
+  .tile { padding: 18px; }
+  @media (max-width: 420px) { .tldr { grid-template-columns: 1fr 1fr; } .tile { padding: 14px; } }
+  .tile .ico { font-size: 26px; }
+  .tile b { display: block; margin-top: 8px; }
+  .tile span { color: var(--muted); font-size: 14px; }
+
+  .card { padding: 28px clamp(20px, 4vw, 36px); margin-bottom: 20px; }
+  h2 { font-size: 22px; letter-spacing: -.4px; margin: 0 0 6px; }
+  h3 { font-size: 17px; margin: 26px 0 6px; }
+  .card p, .card li { color: var(--text); }
+  .card ul { padding-left: 20px; margin: 8px 0; }
+  .meta { color: var(--muted); font-size: 14px; margin-bottom: 4px; }
+  .num {
+    display: inline-grid; place-items: center;
+    width: 26px; height: 26px; margin-right: 8px;
+    border-radius: 8px; background: var(--surface2);
+    font-size: 13px; font-weight: 700; color: var(--violet);
+  }
+
+  /* ---------- contacts ---------- */
+  .contacts { display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); margin-top: 16px; }
+  .contact {
+    display: flex; align-items: center; gap: 14px;
+    padding: 16px; border-radius: 18px;
+    background: var(--surface2);
+    text-decoration: none; color: var(--text);
+    transition: transform .15s ease, box-shadow .15s ease;
+  }
+  .contact:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,.08); }
+  .contact .c-ico {
+    width: 44px; height: 44px; border-radius: 14px; flex: none;
+    display: grid; place-items: center; color: #fff;
+  }
+  .contact .c-ico svg { width: 22px; height: 22px; fill: currentColor; }
+  .contact small { display: block; color: var(--muted); font-size: 13px; }
+  .contact b { font-size: 15px; word-break: break-all; }
+  .mail { background: #FF6B6B; }
+  .wa   { background: #25D366; }
+  .tg   { background: #229ED9; }
+
+  details {
+    border-top: 1px solid var(--border);
+    padding: 14px 0;
+  }
+  details:first-of-type { border-top: 0; }
+  summary { cursor: pointer; font-weight: 600; list-style: none; }
+  summary::-webkit-details-marker { display: none; }
+  summary::after { content: "+"; float: right; color: var(--violet); font-weight: 700; }
+  details[open] summary::after { content: "–"; }
+  details p { color: var(--muted); margin: 8px 0 0; }
+
+  footer { text-align: center; color: var(--muted); font-size: 13px; padding: 20px 0 48px; }
+
+  [data-lang="ru"] .en, [data-lang="en"] .ru { display: none; }
+</style>
+</head>
+<body data-lang="en">
+
+<header>
+  <div class="lang" role="group" aria-label="Language">
+    <button id="b-en" class="on" onclick="setLang('en')">EN</button>
+    <button id="b-ru" onclick="setLang('ru')">RU</button>
+  </div>
+  <div class="wrap">
+    <div class="brand">
+      <div class="logo">
+        <svg viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M21 7.28V5c0-1.1-.9-2-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14c1.1 0 2-.9 2-2v-2.28A2 2 0 0 0 22 15V9a2 2 0 0 0-1-1.72zM20 9v6h-7V9h7zM5 19V5h14v2h-6a2 2 0 0 0-2 2v6c0 1.1.9 2 2 2h6v2H5z"/><circle cx="16" cy="12" r="1.5"/></svg>
+      </div>
+      <b>Spendo</b>
+    </div>
+    <h1>
+      <span class="en">Privacy Policy <span class="grad-text">&amp; Support</span></span>
+      <span class="ru">Конфиденциальность <span class="grad-text">и поддержка</span></span>
+    </h1>
+    <p class="sub">
+      <span class="en">Spendo collects no data. Everything you enter stays on your phone.</span>
+      <span class="ru">Spendo не собирает данные. Всё, что вы вводите, остаётся на вашем телефоне.</span>
+    </p>
+    <div class="pill">🔒
+      <span class="en">100% offline &amp; private</span>
+      <span class="ru">100% офлайн и приватно</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- at a glance -->
+  <div class="tldr">
+    <div class="tile"><div class="ico">🚫</div>
+      <b class="en">No data collected</b><b class="ru">Данные не собираются</b>
+      <span class="en">No accounts, no servers</span><span class="ru">Без аккаунтов и серверов</span></div>
+    <div class="tile"><div class="ico">📱</div>
+      <b class="en">Stored on device</b><b class="ru">Хранится на устройстве</b>
+      <span class="en">Local database only</span><span class="ru">Только локальная база</span></div>
+    <div class="tile"><div class="ico">🙈</div>
+      <b class="en">No tracking</b><b class="ru">Без отслеживания</b>
+      <span class="en">No ads, no analytics</span><span class="ru">Без рекламы и аналитики</span></div>
+    <div class="tile"><div class="ico">🗑️</div>
+      <b class="en">Delete anytime</b><b class="ru">Удаление в любой момент</b>
+      <span class="en">One tap in Settings</span><span class="ru">Одно нажатие в настройках</span></div>
+  </div>
+
+  <!-- ================= ENGLISH POLICY ================= -->
+  <section class="card en" id="privacy">
+    <h2>Privacy Policy</h2>
+    <p class="meta">Effective date: November 7, 2026 · Developer: Qiyomiddin Jalilov</p>
+
+    <p>Spendo (“the app”) is a personal expense and income tracker developed by Qiyomiddin Jalilov. This policy explains how the app handles your information. In short: <b>Spendo does not collect, transmit, sell or share any of your data.</b></p>
+
+    <h3><span class="num">1</span>Data we collect</h3>
+    <p><b>None.</b> Spendo has no servers, no user accounts, no registration and no login. We do not collect your name, email, phone number, location, contacts, device identifiers or usage statistics.</p>
+
+    <h3><span class="num">2</span>Data stored on your device</h3>
+    <p>Everything you enter — expenses, income, amounts, notes, dates, tags, your nickname, selected sticker, currency, budget and settings — is stored <b>only on your device</b> in a local database. It never leaves your phone unless you choose to export or share it yourself. The developer has no access to it.</p>
+
+    <h3><span class="num">3</span>Analytics, advertising and tracking</h3>
+    <p>Spendo contains <b>no analytics, no advertising, no crash-reporting services and no third-party tracking</b>. The app does not track you across other apps or websites.</p>
+
+    <h3><span class="num">4</span>Notifications</h3>
+    <p>Spendo can show “smart alerts” (for example, when you spend more than usual or reach your monthly budget). These are <b>local notifications</b> created on your device by the app itself. No push-notification server is used and nothing is sent over the internet. You can turn alerts off in the app’s Settings or in your phone’s system settings.</p>
+
+    <h3><span class="num">5</span>Export, backup and restore</h3>
+    <ul>
+      <li><b>PDF report and backup file:</b> when you choose to export, the app creates a file on your device and opens the system share sheet. You decide where the file goes (Files, AirDrop, email, a messenger). Once shared, that service’s own privacy policy applies.</li>
+      <li><b>Restore:</b> the app opens the system file picker and reads <b>only the backup file you select</b>. It does not access any other files, photos or documents.</li>
+    </ul>
+
+    <h3><span class="num">6</span>External links</h3>
+    <p>The About screen contains links (Instagram, Telegram, WhatsApp, email, the App Store). Tapping a link opens the corresponding app or browser. Spendo does not send any of your data with these links.</p>
+
+    <h3><span class="num">7</span>Deleting your data</h3>
+    <p>You can delete all your data at any time in <b>Settings → Delete all data</b>. Deleting the app also permanently removes all data stored by it. Because we store nothing on servers, there is nothing for us to delete on our side.</p>
+
+    <h3><span class="num">8</span>Children’s privacy</h3>
+    <p>Spendo does not knowingly collect personal information from anyone, including children under 13, because it does not collect personal information at all.</p>
+
+    <h3><span class="num">9</span>Security</h3>
+    <p>Your data is protected by your device’s own security (passcode, Face ID / Touch ID and device encryption). Keep your device locked and store backup files in a safe place.</p>
+
+    <h3><span class="num">10</span>Changes to this policy</h3>
+    <p>If this policy changes, the updated version will be published on this page with a new effective date.</p>
+
+    <h3><span class="num">11</span>Contact</h3>
+    <p>Questions about this policy: <a href="mailto:mingyuan.cs98@gmail.com">mingyuan.cs98@gmail.com</a></p>
+  </section>
+
+  <!-- ================= RUSSIAN POLICY ================= -->
+  <section class="card ru">
+    <h2>Политика конфиденциальности</h2>
+    <p class="meta">Дата вступления в силу: 7 ноября 2026 · Разработчик: Qiyomiddin Jalilov</p>
+
+    <p>Spendo («приложение») — личный учёт расходов и доходов, разработанный Qiyomiddin Jalilov. Этот документ объясняет, как приложение обращается с вашей информацией. Кратко: <b>Spendo не собирает, не передаёт, не продаёт и не раскрывает ваши данные.</b></p>
+
+    <h3><span class="num">1</span>Какие данные мы собираем</h3>
+    <p><b>Никакие.</b> У Spendo нет серверов, аккаунтов, регистрации и входа. Мы не собираем имя, email, номер телефона, местоположение, контакты, идентификаторы устройства или статистику использования.</p>
+
+    <h3><span class="num">2</span>Данные на вашем устройстве</h3>
+    <p>Всё, что вы вводите — расходы, доходы, суммы, заметки, даты, теги, никнейм, стикер, валюта, бюджет и настройки — хранится <b>только на вашем устройстве</b> в локальной базе данных. Данные не покидают телефон, если вы сами не решите их экспортировать или отправить. У разработчика нет к ним доступа.</p>
+
+    <h3><span class="num">3</span>Аналитика, реклама и отслеживание</h3>
+    <p>В Spendo <b>нет аналитики, рекламы, сервисов отчётов о сбоях и стороннего отслеживания</b>. Приложение не отслеживает вас в других приложениях и на сайтах.</p>
+
+    <h3><span class="num">4</span>Уведомления</h3>
+    <p>Spendo может показывать «умные уведомления» (например, если вы тратите больше обычного или достигли месячного бюджета). Это <b>локальные уведомления</b>, которые создаются на устройстве самим приложением. Сервер push-уведомлений не используется, ничего не отправляется через интернет. Уведомления можно отключить в настройках приложения или телефона.</p>
+
+    <h3><span class="num">5</span>Экспорт, резервная копия и восстановление</h3>
+    <ul>
+      <li><b>PDF-отчёт и резервная копия:</b> при экспорте приложение создаёт файл на устройстве и открывает меню «Поделиться». Вы сами выбираете, куда отправить файл (Файлы, AirDrop, почта, мессенджер). После отправки действует политика выбранного сервиса.</li>
+      <li><b>Восстановление:</b> приложение открывает системный выбор файлов и читает <b>только выбранный вами файл</b>. Доступа к другим файлам, фото или документам нет.</li>
+    </ul>
+
+    <h3><span class="num">6</span>Внешние ссылки</h3>
+    <p>Экран «О приложении» содержит ссылки (Instagram, Telegram, WhatsApp, почта, App Store). Нажатие открывает соответствующее приложение или браузер. Spendo не передаёт вместе с ними никаких ваших данных.</p>
+
+    <h3><span class="num">7</span>Удаление данных</h3>
+    <p>Удалить все данные можно в любой момент: <b>Настройки → Удалить все данные</b>. Удаление приложения также навсегда удаляет все его данные. Мы не храним данные на серверах, поэтому с нашей стороны удалять нечего.</p>
+
+    <h3><span class="num">8</span>Конфиденциальность детей</h3>
+    <p>Spendo сознательно не собирает личную информацию ни от кого, включая детей младше 13 лет, так как вообще не собирает личную информацию.</p>
+
+    <h3><span class="num">9</span>Безопасность</h3>
+    <p>Ваши данные защищены средствами устройства (код-пароль, Face ID / Touch ID, шифрование). Блокируйте устройство и храните файлы резервных копий в надёжном месте.</p>
+
+    <h3><span class="num">10</span>Изменения политики</h3>
+    <p>При изменении политики обновлённая версия будет опубликована на этой странице с новой датой.</p>
+
+    <h3><span class="num">11</span>Контакты</h3>
+    <p>Вопросы о политике: <a href="mailto:mingyuan.cs98@gmail.com">mingyuan.cs98@gmail.com</a></p>
+  </section>
+
+  <!-- ================= SUPPORT ================= -->
+  <section class="card" id="support">
+    <h2><span class="en">Support</span><span class="ru">Поддержка</span></h2>
+    <p class="meta">
+      <span class="en">Need help, found a bug or have an idea? Write to me.</span>
+      <span class="ru">Нужна помощь, нашли ошибку или есть идея? Напишите мне.</span>
+    </p>
+
+    <div class="contacts">
+      <a class="contact" href="mailto:mingyuan.cs98@gmail.com?subject=Spendo">
+        <span class="c-ico mail"><svg viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 0 0-2 2v12c0 1.1.9 2 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg></span>
+        <span><small>Email</small><b>mingyuan.cs98@gmail.com</b></span>
+      </a>
+      <a class="contact" href="https://wa.me/992777094433" target="_blank" rel="noopener">
+        <span class="c-ico wa"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.3-.5.1-1 .1-1.7-.1-.4-.1-.9-.3-1.5-.6-2.6-1.1-4.3-3.8-4.5-4-.1-.2-1-1.4-1-2.6s.6-1.9.9-2.1c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.3 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.6.2.3.7 1.2 1.6 1.9 1.1.9 2 1.2 2.3 1.4.3.1.4.1.6-.1l.8-1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.3z"/></svg></span>
+        <span><small>WhatsApp</small><b>+992 77 709 4433</b></span>
+      </a>
+      <a class="contact" href="https://t.me/+8613661799136" target="_blank" rel="noopener">
+        <span class="c-ico tg"><svg viewBox="0 0 24 24"><path d="M21.9 4.6 18.7 19.7c-.2 1.1-.9 1.3-1.8.8l-4.9-3.6-2.4 2.3c-.3.3-.5.5-1 .5l.3-5 9.2-8.3c.4-.4-.1-.6-.6-.2L6.1 13.4l-4.9-1.5c-1.1-.3-1.1-1 .2-1.5L20.6 3c.9-.3 1.6.2 1.3 1.6z"/></svg></span>
+        <span><small>Telegram</small><b>+86 136 6179 9136</b></span>
+      </a>
+    </div>
+
+    <h3><span class="en">FAQ</span><span class="ru">Частые вопросы</span></h3>
+    <details>
+      <summary><span class="en">Where is my data stored?</span><span class="ru">Где хранятся мои данные?</span></summary>
+      <p><span class="en">Only on your phone, in the app’s local database.</span><span class="ru">Только на вашем телефоне, в локальной базе приложения.</span></p>
+    </details>
+    <details>
+      <summary><span class="en">How do I move my data to a new phone?</span><span class="ru">Как перенести данные на новый телефон?</span></summary>
+      <p><span class="en">Settings → Backup to file → save the file. On the new phone: Settings → Restore from backup.</span><span class="ru">Настройки → Резервная копия → сохраните файл. На новом телефоне: Настройки → Восстановить из копии.</span></p>
+    </details>
+    <details>
+      <summary><span class="en">I deleted the app — can you restore my data?</span><span class="ru">Я удалил приложение — можно восстановить данные?</span></summary>
+      <p><span class="en">No. We never have your data. Make a backup or export a PDF before deleting the app.</span><span class="ru">Нет. У нас нет ваших данных. Перед удалением сделайте резервную копию или PDF-экспорт.</span></p>
+    </details>
+    <details>
+      <summary><span class="en">Is Spendo free?</span><span class="ru">Spendo бесплатный?</span></summary>
+      <p><span class="en">Yes. No ads, no subscriptions, no in-app purchases.</span><span class="ru">Да. Без рекламы, подписок и встроенных покупок.</span></p>
+    </details>
+  </section>
+</main>
+
+<footer>© 2026 Qiyomiddin Jalilov · Spendo</footer>
+
+<script>
+  function setLang(l) {
+    document.body.dataset.lang = l;
+    document.documentElement.lang = l;
+    document.getElementById('b-en').classList.toggle('on', l === 'en');
+    document.getElementById('b-ru').classList.toggle('on', l === 'ru');
+    try { localStorage.setItem('spendo-lang', l); } catch (e) {}
+  }
+  (function () {
+    var l = null;
+    try { l = localStorage.getItem('spendo-lang'); } catch (e) {}
+    if (location.hash === '#ru' || location.search.indexOf('lang=ru') > -1) l = 'ru';
+    if (!l) l = (navigator.language || 'en').toLowerCase().indexOf('ru') === 0 ? 'ru' : 'en';
+    setLang(l);
+  })();
+</script>
+</body>
+</html>
